@@ -1,0 +1,11 @@
+
+<h1> Creating new review for: <%= @restaurants.name %></h1>
+
+<%= form_for (@restaurant, @review) do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.submit "Submit a review", class: "btn btn-primary" %>
+<% end %>
+
+<p><i class="fas fa-undo-alt"></i><%= link_to "Back to list", restaurants_path %></p>
+</div>
