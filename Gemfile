@@ -67,3 +67,8 @@ gem 'font-awesome-sass', '~> 5.0.9'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'jquery-rails' # Add this line if you use Rails 5.1 or higher
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
