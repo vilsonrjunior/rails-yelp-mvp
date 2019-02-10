@@ -1,14 +1,14 @@
-
-<%= simple_form_for @restaurant do |f| %>
-
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :phone_number %>
-  <%= f.input :category %>
-
-  <%= f.submit "Create a new restaurant", class: "btn btn-primary" %>
-<% end %>
-
-
-<p><i class="fas fa-undo-alt"></i><%= link_to "Back to list", restaurants_path %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>Create a new restaurant</h1>
+      <%= simple_form_for @restaurant do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :phone_number %>
+        <%= f.input :category, collection: Restaurant::CATEGORIES %>
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
 </div>
